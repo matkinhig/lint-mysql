@@ -1,0 +1,20 @@
+theme: jekyll-theme-cayman
+title: MyTAP
+description: Unit testing for MySQL
+show_downloads: false
+google_analytics:
+
+header_pages:
+  - index.md
+  - documentation.md
+  - tests.md
+  - utilities.md
+  - integration.md
+  - about.md
+
+toc:
+  minItemsToShowToc: 3
+  showCollapsed: true
+
+exclude:
+  - oldsite

@@ -1,0 +1,62 @@
+Revision history for MyTAP
+==========================
+
+1.0   2018-07-21
+-------------------------
+This is a massive rewrite and extension of the available tests with thanks to @animalcarpet.
+This version also has version specific tests and uses slightly different tests based
+on  the MySQL version.
+This version is tested on MySQL 5.5, 5.6 and 5.7
+
+0.07  2018-06-18
+-------------------------
+* col_has_unique_index, col_hasnt_unique_index added to test for
+  the existence or absence of a unique index.
+* tests added for the new functions.
+* syntax errors fixed in the tests for the has[nt]_function and
+  has[nt]_procedure functions.
+* runtests.sh script now has a filter option.
+
+0.06  2017-06-18
+-------------------------
+* has_table and hasnt_table moved to separate file
+* has_trigger and hasnt_trigger added to test if a table has a
+  certain trigger
+* tests added for the new functions
+
+0.05  2016-06-22T19:25:12
+-------------------------
+* col_has_pos_in_named_index, col_has_pos_in_named_index added to test
+  for index keys that combine multiple columns.
+* tests added for the new functions.
+
+0.04  2016-01-01T21:55:58
+-------------------------
+* col_has_named_index, col_hasnt_named_index added to allow index key names
+  that differ from the column name. Defaults to column name.
+* tests added for the new functions
+
+0.03  2015-04-26T08:12:37
+-------------------------
+* _has_table reworked to distinguish between views and tables
+* has_table and hasnt_tabel reworked to allow custom description
+* has_view, hasnt_view, has_security_invoker, has_security_definer tests added
+* all kinds of column related tests added
+* has_function, hasnt_function, has_procedure, hasnt_procedure added
+
+Note: these tests are only tested on MySQL 5.5x
+
+0.02  2010-08-30T17:36:29
+-------------------------
+* Modified exception-throwing code to always clear out the cached data before
+  dying. Doesn't cover cases where the code being tested dies, but at least it
+  covers our own intentional deaths.
+* Fixed `DROP` lines to be terminated with "//" instead of ";". Seems like
+  some versions of MySQl didn't mind the semicolon, but others did.
+
+
+0.01  2010-07-28T18:37:03
+-------------------------
+* Initial public release with core functionality ported from
+  [pgTAP](http://pgtap.org/).
+  [Announcement](http://justatheory.com/computers/databases/mysql/introducing_mytap.html).
